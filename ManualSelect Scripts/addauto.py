@@ -113,9 +113,6 @@ def autos():
     
 
     for user in users:
-        delay = random.randrange(60, 360)
-        print(f"Waiting for {delay} Seconds...")
-        time.sleep(delay)
         if (int(startfrom) <= int    (user['srno'])) and (int(user['srno']) <= int(endto)):
             try:
                 status = 'delta'
@@ -129,7 +126,9 @@ def autos():
                 status = 'DONE'
                 
                     #print("Waiting for 60-180 Seconds...")
-                time.sleep(random.randrange(1,3))
+                delay = random.randrange(60, 360)
+                print(f"Waiting for {delay} Seconds...")
+                time.sleep(delay)
                 
             except UserPrivacyRestrictedError:
                 status = 'PrivacyRestrictedError'
