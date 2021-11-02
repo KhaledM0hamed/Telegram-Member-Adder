@@ -113,7 +113,7 @@ def autos():
     
 
     for user in users:
-        delay = random.randrange(60 - 360)
+        delay = random.randrange(60, 360)
         print(f"Waiting for {delay} Seconds...")
         time.sleep(delay)
         if (int(startfrom) <= int    (user['srno'])) and (int(user['srno']) <= int(endto)):
